@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+body {
+    font-family: 'Jua', sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    max-width: 500px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #4a4a4a;
+    font-size: 2.5em;
+}
+
+p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+.main-bird-img {
+    width: 200px;
+    margin: 20px 0;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.start-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.5em;
+    font-family: 'Jua', sans-serif;
+    color: #fff;
+    background-color: #ff6f61;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.start-btn:hover {
+    background-color: #ff8c7a;
+    transform: scale(1.05);
+}
+
+/* Quiz Page Specifics */
+.quiz-container {
+    text-align: left;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.progress {
+    width: 0%;
+    height: 20px;
+    background-color: #ff6f61;
+    transition: width 0.5s ease-in-out;
+    text-align: center;
+    line-height: 20px;
+    color: white;
+}
+
+.question {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.answer-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    font-family: 'Jua', sans-serif;
+    background-color: #f8f8f8;
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.answer-btn:hover {
+    background-color: #ffefeb;
+    border-color: #ff6f61;
+}
+
+/* Loading Animation */
+.loading-container {
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-text {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+.bird-flying {
+    width: 100px;
+    animation: fly 1.5s infinite linear;
+}
+
+@keyframes fly {
+    0% { transform: translateX(-150px) scaleX(-1); }
+    50% { transform: translateX(0) scaleX(-1); }
+    51% { transform: translateX(0) scaleX(1); }
+    100% { transform: translateX(150px) scaleX(1); }
+}
+
+/* Results Page */
+.result-container img {
+    width: 250px;
+    border-radius: 50%;
+    border: 5px solid #ff6f61;
+    margin-bottom: 20px;
+}
+
+.result-container h2 {
+    font-size: 2em;
+}
+
+.result-container .bird-name {
+    font-size: 3em;
+    color: #ff6f61;
+    margin-bottom: 10px;
+}
+
+.result-description {
+    font-size: 1.2em;
+    padding: 0 15px;
+    margin-bottom: 20px;
+}
+
+.best-match {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #ffefeb;
+    border-radius: 15px;
+}
+
+.best-match h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #ff6f61;
+}
+
+.best-match p {
+    margin: 5px 0 0;
+    font-size: 1.2em;
+}
+
+.share-buttons {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.share-btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.1em;
+    font-family: 'Jua', sans-serif;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.share-btn:hover {
+    transform: scale(1.05);
+}
+
+.kakao-btn {
+    background-color: #FEE500;
+    color: #191919;
+}
+
+.save-btn {
+    background-color: #4CAF50;
+    color: white;
+}

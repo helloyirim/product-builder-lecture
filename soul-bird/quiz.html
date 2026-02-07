@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 소울 버드 찾기 - 퀴즈</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container quiz-container" id="quiz-box">
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+        <div id="question-container">
+            <p class="question" id="question"></p>
+            <div id="answers"></div>
+        </div>
+    </div>
+    <div class="container loading-container" id="loading-box">
+        <img src="images/flying-bird.gif" alt="나는 새" class="bird-flying">
+        <p class="loading-text">당신과 닮은 새를 날려보내고 있어요...</p>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
