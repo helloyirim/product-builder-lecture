@@ -1,1 +1,104 @@
-/* Add styles here */
+:root {
+    --background-color-light: #f4f4f4;
+    --text-color-light: #333;
+    --number-bg-light: #eee;
+    --button-bg-light: #007bff;
+    --button-text-light: #fff;
+
+    --background-color-dark: #333;
+    --text-color-dark: #f4f4f4;
+    --number-bg-dark: #555;
+    --button-bg-dark: #0056b3;
+    --button-text-dark: #fff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light Mode (Default) */
+body {
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+}
+
+.lotto-numbers .number {
+    background-color: var(--number-bg-light);
+    color: var(--text-color-light);
+}
+
+button {
+    background-color: var(--button-bg-light);
+    color: var(--button-text-light);
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+}
+
+body.dark-mode .lotto-numbers .number {
+    background-color: var(--number-bg-dark);
+    color: var(--text-color-dark);
+}
+
+body.dark-mode button {
+    background-color: var(--button-bg-dark);
+    color: var(--button-text-dark);
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.theme-toggle {
+    margin-bottom: 20px;
+}
+
+.lotto-numbers {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.lotto-numbers .number {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 1.5em;
+    font-weight: bold;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
